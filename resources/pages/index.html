@@ -1,0 +1,65 @@
+<!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://via.placeholder.com/70x70">
+    <link rel="stylesheet" href="/assets/css/mvp.css">
+
+    <meta charset="utf-8">
+    <meta name="description" content="My description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple golang vote</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/"><img alt="Logo" src="https://via.placeholder.com/200x70?text=Simple+Golang+Vote" height="70"></a>
+        </nav>
+        <h1>What is your favorite fruit?</h1>
+        <p>Simple Golang Voting</p>
+        <br>
+        <div style="width:100%;display:flex;justify-content:center">
+          <form action="/" method="POST" style="width:300px">
+            <div id="vote_form"></div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+    </header>
+    <main>
+        <hr>
+        <section id='vote_result'>
+            <header>
+                <h2>Vote Result</h2>
+            </header>
+        </section>
+    </main>
+</body>
+<script>
+const choices = [
+  'apple',
+  'pinaple',
+  'orange',
+]
+const vote_form = document.getElementById('vote_form')
+const vote_result = document.getElementById('vote_result')
+
+choices.map(choice => {
+    vote_form.innerHTML += `
+        <label>
+          <input type="radio" value="${choice}">
+          ${choice}
+        </label>
+    `
+    vote_result.innerHTML += `
+        <aside>
+            <h3>${choice}</h3>
+            <p>0 votes</p>
+        </aside>
+    `
+})
+</script>
+</html>

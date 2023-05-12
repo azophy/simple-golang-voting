@@ -10,6 +10,13 @@ The feature should be pretty simple:
 2. The data would be stored as a SQLite table. The table named 'vote' would store the actual voted value.
 3. It would consist of a single page: the form to pick your vote, and to display the resulting votes.
 4. For the frontend side, it should be a simple HTML page, styled with [MVP.css](https://andybrewer.github.io/mvp/).
+5. For the backend, it would use [Echo Framework](https://echo.labstack.com/).
+
+## How to use
+
+1. [Install go](https://go.dev/doc/install).
+2. Clone this repo, cd to the folder
+3. run `go run main.go`. 
 
 ## Future challenge
 - User auth. Detect if the user has already voted. The simple implementation maybe to just store the IP of the user
